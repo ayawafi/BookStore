@@ -1,0 +1,8 @@
+﻿@model BookStore.Models.Book
+
+<h2>@Model.Title</h2>
+<p><strong>Description:</strong> @Model.Description</p>
+<p><strong>Author:</strong> @Model.Author?.Name</p>
+<p><strong>Category:</strong> @Model.Category?.Name</p>
+
+<a asp-action="Index">Back to list</a>

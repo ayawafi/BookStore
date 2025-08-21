@@ -1,0 +1,14 @@
+﻿@model BookStore.Models.Author
+
+<h2>@Model.Name</h2>
+<p><strong>Bio:</strong> @Model.Biography</p>
+
+<h3>Books by @Model.Name:</h3>
+<ul>
+    @foreach (var book in Model.Books)
+    {
+        <li>@book.Title (@book.Category?.Name)</li>
+    }
+</ul>
+
+<a asp-action="Index">Back to list</a>

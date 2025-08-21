@@ -1,0 +1,14 @@
+﻿@model IEnumerable<BookStore.Models.Author>
+
+<h2>Authors</h2>
+
+<ul>
+    @foreach (var author in Model)
+    {
+        <li>
+            <a asp-action="Details" asp-route-id="@author.Id">
+                @author.Name
+            </a>
+        </li>
+    }
+</ul>

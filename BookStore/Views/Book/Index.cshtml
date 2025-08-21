@@ -1,0 +1,13 @@
+﻿@model IEnumerable<BookStore.Models.Book>
+
+<h2>Books List</h2>
+
+<ul>
+    @foreach (var book in Model)
+    {
+        <li>
+            <a asp-action="Details" asp-route-id="@book.Id">@book.Title</a>
+            - by @book.Author?.Name (@book.Category?.Name)
+        </li>
+    }
+</ul>
