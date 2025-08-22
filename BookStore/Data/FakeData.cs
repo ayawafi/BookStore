@@ -27,7 +27,7 @@ namespace BookStore.Data
 
         static FakeData()
         {
-            // ربط العلاقات
+         
             foreach (var book in Books)
             {
                 book.Author = Authors.FirstOrDefault(a => a.Id == book.AuthorId);
